@@ -14,26 +14,44 @@ A pointer is a variable that contains a memory address, usually for another vari
 Pointers must be declared to the same datatype they will represent
 ___
 ##### Code
-```C
-void	ft_ft(int *nbr)
-{
-	  *nbr = 42;
-}
-//I'm unsure how to test if this works
-```
-### ex02 - ft_ultimate_ft
-##### Pointers to Pointers
-Pointers can also point to other pointers. To declare one such 'sub-pointer,' add an additional asterisk to its declaration - `datatype **pointer_to_pointer_name`. Access the pointer with the same number of asterisks before its name.
+>```C
+>void	ft_ft(int *nbr)
+>{
+>	  *nbr = 42;
+>}
+>//I'm unsure how to test if this works
+>```
+### ex01 - ft_ultimate_ft
 ##### Problem
 Create a function that takes a pointer to pointer to pointer to pointer to pointer
 to pointer to pointer to pointer to pointer to int as a parameter and sets the value
 "42" to that int.
 > In other words - given nine pointers to an int variable, change the int variable to 42
 ___
+##### Pointers to Pointers
+Pointers can also point to other pointers. To declare one such 'sub-pointer,' add an additional asterisk to its declaration - `datatype **pointer_to_pointer_name`. Access the pointer with the same number of asterisks before its name.
+___
 ##### Code
-```C
-void	ft_ultimate_ft(*********nbr)
-{
-	*********nbr = 42;
-}
-```
+>```C
+>void	ft_ultimate_ft(*********nbr)
+>{
+>	*********nbr = 42;
+>}
+>//I'm unsure how to test if this works
+>```
+### ex02 - ft_swap
+##### Problem
+Create a function that swaps the value of two integers whose addresses are entered
+as parameters.
+> In other words - given two pointers to int variables, swap the values of the int variables
+___
+##### Code
+>```C
+>void	ft_swap(int *a, int *b)
+>{
+>	int temp;
+>	temp = *a;
+>	*a = *b;
+>	*b = temp;
+>}
+>```
