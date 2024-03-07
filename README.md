@@ -1,6 +1,6 @@
 # Project 4 - C01
 ### ex00 - ft_ft
-Don't forget to 
+Don't forget to turn spaces into tabs if using VSCode! (ctrl+a>ctrl+shift+p>"convert indents to tabs")
 ##### Pointers
 A pointer is a variable that contains a memory address, usually for another variable
 - `datatype * pointer_name;` declares a pointer (to a pseudo-random value)
@@ -13,6 +13,7 @@ Create a function that takes a pointer to int as a parameter, and sets the value
 to that int.
 Function Prototype - `void  ft_ft(int *nbr);`
 > In other words - given a pointer to an int variable, change the int variable to 42
+___
 ##### Code
 ```C
 void  ft_ft(int *nbr)
@@ -26,5 +27,5 @@ void  ft_ft(int *nbr)
   int * ptra = &a
   ft_ft(*ptra);
   write(1,&a,1);
-}
+}*/
 ```
