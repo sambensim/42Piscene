@@ -15,6 +15,7 @@ Function Prototype - `void  ft_ft(int *nbr);`
 > In other words - given a pointer to an int variable, change the int variable to 42
 ___
 ##### Code
+Doesn't work, prints `*` with test case rather than `42`
 ```C
 void  ft_ft(int *nbr)
 {
@@ -24,7 +25,7 @@ void  ft_ft(int *nbr)
 /*void main() {
   #include<unistd.h>
   int a = 10;
-  int * ptra = &a
+  int * ptra = &a;
   ft_ft(*ptra);
   write(1,&a,1);
 }*/
