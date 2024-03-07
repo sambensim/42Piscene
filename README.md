@@ -14,13 +14,13 @@ A pointer is a variable that contains a memory address, usually for another vari
 Pointers must be declared to the same datatype they will represent
 ___
 ##### Code
->```C
->void	ft_ft(int *nbr)
->{
->	  *nbr = 42;
->}
->//I'm unsure how to test if this works
->```
+```C
+void	ft_ft(int *nbr)
+{
+	  *nbr = 42;
+}
+//I'm unsure how to test if this works
+```
 ### ex01 - ft_ultimate_ft
 ##### Problem
 Create a function that takes a pointer to pointer to pointer to pointer to pointer
@@ -32,13 +32,13 @@ ___
 Pointers can also point to other pointers. To declare one such 'sub-pointer,' add an additional asterisk to its declaration - `datatype **pointer_to_pointer_name`. Access the pointer with the same number of asterisks before its name.
 ___
 ##### Code
->```C
->void	ft_ultimate_ft(*********nbr)
->{
->	*********nbr = 42;
->}
->//I'm unsure how to test if this works
->```
+```C
+void	ft_ultimate_ft(*********nbr)
+{
+	*********nbr = 42;
+}
+//I'm unsure how to test if this works
+```
 ### ex02 - ft_swap
 ##### Problem
 Create a function that swaps the value of two integers whose addresses are entered
@@ -46,12 +46,36 @@ as parameters.
 > In other words - given two pointers to int variables, swap the values of the int variables
 ___
 ##### Code
->```C
->void	ft_swap(int *a, int *b)
->{
->	int temp;
->	temp = *a;
->	*a = *b;
->	*b = temp;
->}
->```
+```C
+void	ft_swap(int *a, int *b)
+{
+	int temp;
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+//Not yet tested
+```
+### ex03 - ft_div_mod
+##### Problem
+Create a function that divides parameter a by b and stores the result in the int pointed by
+div. It also stores the remainder of the division of a by b in the int pointed by mod.
+> Given two ints a and b and two pointers to int variables div and mod, set div to the number of times b goes into a and mod to the remainder of a/b
+___
+##### Integer Division and Modulus
+Because of the way C stores integers vs numbers with a decimal point (floating point numbers), variables of the integer type can never have a decimal. This means that when doing division with integers, C will always round down:
+- 1/2=0
+- 199/100=1
+To get the remainder of this division, the modulo operation is used - represented in C as `%`:
+- 1%2=1
+- 199%100=99
+___
+##### Code
+```C
+void	ft_div_mod(int a, int b, int *div, int *mod)
+{
+	*div = a/b
+	*mod = a%b
+}
+//Not yet tested
+```
