@@ -50,6 +50,7 @@ ___
 void	ft_swap(int *a, int *b)
 {
 	int temp;
+
 	temp = *a;
 	*a = *b;
 	*b = temp;
@@ -80,6 +81,48 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 //Not yet tested
 ```
 ### ex04 - ft_ultimate_div_mod
+##### Problem
 Create a function that divides parameter a by b. The result of this division is stored in the
 int pointed by a. The remainder of the division is stored in the int pointed by b.
-> In other words - given two 
+> In other words - given pointers to int variables a and b, replace a with the number of times b goes into a and replace b with the remainder of a/b (this is the same as the last excercise but with different target variables)
+___ 
+##### Code
+```C
+void	ft_ultimate_div_mod(int *a, int *b)
+{
+	int temp = *a;
+
+	*a = *a/*b
+	*b = temp/*b
+}
+```
+### ex05 - ft_putstr
+##### Problem
+Create a function that displays a string of characters on the standard output
+> In other words - given the pointer to a character array (C's version of a string) variable, print the entire array/string
+___
+##### Strings in C and Char as a Boolean
+Note that there is no 'string' data type in C. Instead, strings are stored as one-dimensional char arrays
+- A variable meant to hold a string can be initialized with `char var_name[]`
+- A value can be given to a string variable with `var_name[] = "text";`.
+	- Optionally, the size of the array can be given in the assignment and/or declaration step: `char var_name[size] = "text";`
+	- Strings take up a number of bytes equal to the number of chars in the array plus one - due to the need to end the string in `\0`, the null character (hence the term 'null-terminated string')
+	- Strings can also be assigned a value one character at a time: `var_name[] = {'s','t','r','i','n,'g','\0'};`
+		- Note here that the null character must be included in the assignment, this is automatically done if defining the string using double quotes
+- A value can be accessed with `var_name[]` and an individual character can be accessed with `var_name[char_index]`
+
+**There is no boolean data type**, in C, all integers and char indices are true as long as they are not zero (at the 0 index of characters is the null character `\0`)
+	- Thus, `if (42)`, `if (-10)`, and `if ('a')` will always be true
+##### Code
+```C
+void ft_putstr(char *str)
+{
+	int str_index;
+
+	str_index = 0;
+	while(str[str_index] != '\0') //the '!=...' is not neccesary, but helps with readability
+	{
+		write(1,*str[string_index],1);
+	}
+}
+```
