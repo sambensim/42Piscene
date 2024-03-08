@@ -60,7 +60,7 @@ void	ft_swap(int *a, int *b)
 ##### Problem
 Create a function that divides parameter a by b and stores the result in the int pointed by
 div. It also stores the remainder of the division of a by b in the int pointed by mod.
-> Given two ints a and b and two pointers to int variables div and mod, set div to the number of times b goes into a and mod to the remainder of a/b
+> In other words - given two ints a and b and two pointers to int variables div and mod, set div to the number of times b goes into a and mod to the remainder of a/b
 ___
 ##### Integer Division and Modulus
 Because of the way C stores integers vs numbers with a decimal point (floating point numbers), variables of the integer type can never have a decimal. This means that when doing division with integers, C will always round down:
@@ -79,3 +79,7 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 }
 //Not yet tested
 ```
+### ex04 - ft_ultimate_div_mod
+Create a function that divides parameter a by b. The result of this division is stored in the
+int pointed by a. The remainder of the division is stored in the int pointed by b.
+> In other words - given two 
