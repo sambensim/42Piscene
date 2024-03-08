@@ -165,7 +165,7 @@ void	ft_rev_int_tab(int *tab, int size)
 	{
 		temp_array[size-(index+1)]=*tab[index];
 	}
-	*tab[] = temp_array[];
+	tab[] = temp_array[];
 }
 ```
 ### ex08 - ft_sort_int_tab
@@ -193,9 +193,9 @@ void ft_sort_int_tab(int *tab, int size)
 		//The next few lines could optionally be made into a second function for readability
 		if *tab[index]>*tab[index+1]
 		{
-			temp = *tab[index]
-			*tab[index] = *tab[index+1]
-			*tab[index+1] = temp
+			temp = tab[index]
+			tab[index] = tab[index+1]
+			tab[index+1] = temp
 			sorted = 0;
 		}
 		index++;
