@@ -113,6 +113,7 @@ Note that there is no 'string' data type in C. Instead, strings are stored as on
 
 **There is no boolean data type**, in C, all integers and char indices are true as long as they are not zero (at the 0 index of characters is the null character `\0`)
 	- Thus, `if (42)`, `if (-10)`, and `if ('a')` will always be true
+___
 ##### Code
 ```C
 void ft_putstr(char *str)
@@ -123,6 +124,46 @@ void ft_putstr(char *str)
 	while(str[str_index] != '\0') //the '!=...' is not neccesary, but helps with readability
 	{
 		write(1,*str[string_index],1);
+		str_index++;
 	}
+}
+```
+### ex06 - ft_strlen
+##### Problem
+Create a function that counts and returns the number of characters in a string
+> this is the same as ex05 but with a different output!
+___
+##### Code
+```C
+int	ft_strlen(char *str)
+{
+	int str_index;
+
+	str_index = 0;
+	while(str[str_index])
+	{
+		str_index++;
+	}
+	return (str_index-1); //Minus one so we don't include the null character
+}
+```
+### ex07 - ft_rev_int_tab
+##### Problem
+Create a function which reverses a given array of integer (first goes last, etc). The arguments are a pointer to int and the number of ints in the array.
+> In other words - given the pointer to an array of integers ('tab') and an integer representing the size of that array ('size'), reverse the order of the array (set tab to that value)
+##### Code
+```C
+//Untested, probably doesn't work lol
+void	ft_rev_int_tab(int *tab, int size)
+{
+	int index;
+	int temp_array[size];
+
+	index = size-1;
+	while(index+1);
+	{
+		temp_array[size-(index+1)]=*tab[index];
+	}
+	*tab[] = temp_array[];
 }
 ```
