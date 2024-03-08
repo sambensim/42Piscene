@@ -151,6 +151,7 @@ int	ft_strlen(char *str)
 ##### Problem
 Create a function which reverses a given array of integer (first goes last, etc). The arguments are a pointer to int and the number of ints in the array.
 > In other words - given the pointer to an array of integers ('tab') and an integer representing the size of that array ('size'), reverse the order of the array (set tab to that value)
+___
 ##### Code
 ```C
 //Untested, probably doesn't work lol
@@ -165,5 +166,39 @@ void	ft_rev_int_tab(int *tab, int size)
 		temp_array[size-(index+1)]=*tab[index];
 	}
 	*tab[] = temp_array[];
+}
+```
+### ex08 - ft_sort_int_tab
+##### Problem
+Create a function which sorts an array of integers by ascending order. The arguments are a pointer to int and the number of ints in the array.
+> Time for QuickSort™!
+___
+##### Code
+```C
+void ft_sort_int_tab(int *tab, int size)
+{
+	int sorted;
+	int index;
+	int temp;
+
+	sorted = 0; //0 for false
+	index = 0;
+	while (!sorted || index)
+	{
+		if (index == size)
+		{
+			sorted = 1;
+			index = 0;
+		}
+		//The next few lines could optionally be made into a second function for readability
+		if *tab[index]>*tab[index+1]
+		{
+			temp = *tab[index]
+			*tab[index] = *tab[index+1]
+			*tab[index+1] = temp
+			sorted = 0;
+		}
+		index++;
+	}
 }
 ```
