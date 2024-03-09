@@ -4,28 +4,35 @@
 > For subject 00, the vertices should be 'o's, the left and right edges '|', the top and bottom edges '-', and the center ' '
 ### Code
 ```C
-//all untested
 void  ft_putchar(char character)
 {
   write(1, &character, 1);
 }
 
-void  rush(int w, int h) //for subjects beyond 00, a wrapper function could be made which changes the characters printed for parts of the rect
+void  rush(int w, int h)
 {
   int  x;
   int  y;
+  int x_isonedge;
+  int y_isonedge;
 
-  y = 0;
-  while (y < h)
+  y = 1;
+  while (y <= h)
   {
-    x = 0;
-    while (x < w)
+    x = 1;
+    y_isonedge = 0;
+    if (y == 1 || y == h)
+      y_isonedge = 1;
+    while (x <= w)
     {
-      if ((x == w-1 || x == 0) && (y == h-1 || y == 0)) //to increase readability, the condition for each axis could be made into a variable
+      x_isonedge = 0;
+      if (x == 1 || x == w)
+        x_isonedge = 1;
+      if (x_isonedge && y_isonedge)
         ft_putchar('o');
-      else if ((x == w-1 || x == 0))
+      else if (x_isonedge)
         ft_putchar('|');
-      else if ((y == h-1 || y == 0))
+      else if (y_isonedge)
         ft_putchar('-');
       else
         ft_putchar(' ');
@@ -54,7 +61,7 @@ void  rush_inside(int w, int h, char vertex, char lr_side, char tb_side, char in
   while (y < h)
   {
     x = 0;
-    y_isonedge = (y == h-1 || y == 0);
+    y_isonedge = (y == h-1 || y == 0); //this doesn't work
     while (x < w)
     {
       x_isonedge = (x == w-1 || x == 0);
