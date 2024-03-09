@@ -1,0 +1,15 @@
+### Problem
+problem text
+> In other words - rephrase problem
+> Additional comments
+### Notes
+note text
+### Code
+```C
+function_declaration()
+{
+  declare variables;
+
+  code start
+}
+```
