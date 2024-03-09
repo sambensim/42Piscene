@@ -31,6 +31,7 @@ void  rush(int w, int h) //for subjects beyond 00, a wrapper function could be m
         ft_putchar(' ');
       x++;
     }
+    ft_putchar('\n');
     y++;
   }
 }
@@ -67,6 +68,7 @@ void  rush_inside(int w, int h, char vertex, char lr_side, char tb_side, char in
         ft_putchar(inside);
       x++;
     }
+    ft_putchar('\n');
     y++;
   }
 }
