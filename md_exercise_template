@@ -2,8 +2,10 @@
 problem text
 > In other words - rephrase problem
 > Additional comments
+___
 ### Notes
 note text
+___
 ### Code
 ```C
 function_declaration()
