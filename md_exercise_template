@@ -10,8 +10,8 @@ ___
 ```C
 function_declaration()
 {
-  declare variables;
+	declare variables;
 
-  code start
+	code start
 }
 ```
