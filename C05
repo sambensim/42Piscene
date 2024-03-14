@@ -1,0 +1,35 @@
+# C05
+### ex00 - ft_iterative_factorial
+Create an iterated function that returns a number. This number is the result of a factorial operation based on the number given as a parameter. If the argument is not valid the function should return 0. Overflows must not be handled, the function return will be undefined.
+> In other words - given a number, calculate its factorial without recursion
+> A number's factorial is the product of that number with all integers below it until zero (non-inclusive)
+___
+### Code
+```C
+int	ft_iterative_factorial(int nb)
+{
+	int out;
+
+	out = nb;
+	while (--nb)
+	{
+		out *= nb;
+	}
+	return (out);
+}
+```
+### ex01 - ft_recursive_factorial
+Create a recursive function that returns the factorial of the number given as a parameter. If the argument is not valid the function should return 0. Overflows must not be handled, the function return will be undefined.
+> In other words - given a number, calculate its factorial *with* recursion (create a function that calls itself)
+___
+### Code
+```C
+int	ft_recursive_factorial(int nb)
+{
+	if (nb != 1)
+		return (nb * ft_recursive_factorial(nb - 1));
+	else
+		return (1);
+
+}
+```
