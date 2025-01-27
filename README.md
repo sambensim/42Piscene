@@ -27,6 +27,7 @@ C05 - 0%
 C06 - 0%, 0%, 0%, 70%
 
 ---
+Exam 00 - [missed]
 
 Exam 01 - 100%
 
@@ -52,7 +53,7 @@ unique attempts made - 15
 
 average score - 19.01 (adds up to 666!)
 
-meadian score - 10%
+median score - 10%
 
 mode score - 0%
 
